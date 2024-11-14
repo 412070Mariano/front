@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+body{
+    background-image: none;
+    overflow: hidden;
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background:  #1C1C1C;
+    height: 100vh;
+    /* overflow-y: auto; */
+}
+.form-label{
+    color: #ffd700;
+    font-weight: 500;
+}
+.form-select {
+    max-width: 100%;
+    min-width: 150px;
+    flex-grow: 1;
+}
+#datos_butaca{
+    flex: 1;
+/*     height: 270px;
+    overflow-y: auto;
+    background-color: rgb(53, 53, 53); */
+}
+#datos_butaca div p{
+    color: #ffd700;
+    text-align: start;
+    padding-left: 20%;
+}
+/* .datos-div {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    padding-top: 10px;
+} */
+.contenedor-btn{
+    /* direction: flex;
+    justify-content: center; */
+    width: 80%;
+    margin-left: 5%;
+}
+#datos_butaca div div input{
+    flex-direction: row;
+    margin-right: 4%;
+    width: 22%; 
+    font-size: 17px;
+    padding: 10px;
+}
+#datos_butaca, .consultar{
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100vw;
+    color: #ffd700;
+    text-align: center;
+    font-family: 'monserrat', sans-serif;
+    margin: 0 -20px;
+}
+#boton_consultar{
+    color: #ffd700;
+    border: #ffd700 1px solid;
+}
+.contenedor-butacas {
+    margin: 0 10% 0 16%;
+}
+#butacas_cargadas {
+    flex-wrap: wrap;
+    flex: 2;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1px;
+    padding: 10px;
+    background-color: #ffffffd6;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    max-width: 55%;
+    margin: 20px auto ;
+    height: max-content;
+}
+.butaca {
+    width: 28px;
+    height: 45px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.butaca_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+}
+.butaca p {
+    position: absolute;
+    bottom: 3px; 
+    right: 9px;
+    font-size: 0.8em;
+    color: #151200;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+.butaca:hover {
+    transform: scale(1.1);
+}
+.butaca.selected {
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+.butaca_ocupada {
+    width: 28px;
+    height: 45px; 
+    position: relative;
+}
+.butaca_ocupada p {
+    position: absolute;
+    bottom: 3px; 
+    right: 9px; 
+    font-size: 0.8em;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+.ticktets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1C1C1C;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ticket {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px dashed #000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ticket::before, 
+.ticket::after { 
+    content: ''; 
+    position: absolute; 
+    width: 10px; 
+    height: 10px; 
+    background-color: #fff; 
+    border: 2px dashed #000; 
+    border-radius: 50%; 
+} 
+.ticket::before { 
+    top: -12px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+} 
+.ticket::after { 
+    bottom: -12px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+} 
+.ticket h3 { 
+    font-weight: 600;
+    color: #000; 
+    margin-bottom: 15px; 
+    font-family: 'Courier New', Courier, monospace; 
+} 
+.ticket p { 
+    margin: 5px 0; 
+    font-size: 1.1em; 
+    font-family: 'Courier New', Courier, monospace; 
+} 
+.ticket .barcode { 
+    margin-top: 15px; 
+    border-top: 1px solid #000; 
+    padding-top: 10px; 
+    font-family: 'Courier New', Courier, monospace; 
+}
